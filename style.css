@@ -44,6 +44,10 @@ h1 {
 	font-size: 30px;
 }
 
+#header img {
+	padding: 10px 0 0 15px;
+}
+
 #header > div,
 #header ul,
 h1 {
@@ -249,6 +253,13 @@ table#axo_detail th {
 	margin: 100px auto;
 }
 
-.translated_part {
-	border-bottom: 1px dashed #000000;
+.important {
+	background-color: #cccccc;
+	border-radius: 2px;
+	padding: 0 5px;
+}
+
+.has_hint {
+	border-bottom: 1px dotted #000000;
+	cursor: pointer;
 }

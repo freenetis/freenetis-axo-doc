@@ -11,6 +11,7 @@
 	<head>
 		<title>FreenetIS AXO documentation</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="shorcut icon" type="image/x-icon" href="skin/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="style.css" media="screen">
 		<link rel='stylesheet' type='text/css' href='skin/ui.dynatree.css'>
 		<script src='js/jquery.min.js' type="text/javascript"></script>
@@ -22,7 +23,8 @@
 	<body>
 		<div id="loading"></div>
 		<div class="hide" id="header">
-			<h1>Free<span>net</span>IS</h1>
+			<img src="skin/logo_freenetis.jpg">
+			<!--<h1>Free<span>net</span>IS</h1>-->
 			<div class="t">AXO documentation</div>
 			<ul class="tab">
 				<li class="tab" id="sources_tab"><span class="t">Pages</span></li>
@@ -50,7 +52,7 @@
 						<table>
 							<tbody id="access_table">
 								<tr>
-									<th>AXO value</th>
+									<th class="t">AXO value</th>
 									<th>AXO</th>
 									<th>ACO</th>
 									<th class="t">Actions</th>
@@ -61,7 +63,7 @@
 						<table>
 							<tbody id="access-partial_table">
 								<tr>
-									<th>AXO value</th>
+									<th class="t">AXO value</th>
 									<th>AXO</th>
 									<th>ACO</th>
 									<th class="t">Actions</th>
@@ -72,7 +74,7 @@
 						<table>
 							<tbody id="links_table">
 								<tr>
-									<th>AXO value</th>
+									<th class="t">AXO value</th>
 									<th>AXO</th>
 									<th>ACO</th>
 									<th class="t">Actions</th>
@@ -83,7 +85,7 @@
 						<table>
 							<tbody id="breadcrumbs_table">
 								<tr>
-									<th>AXO value</th>
+									<th class="t">AXO value</th>
 									<th>AXO</th>
 									<th>ACO</th>
 									<th class="t">Actions</th>
@@ -94,7 +96,7 @@
 						<table>
 							<tbody id="grid-action_table">
 								<tr>
-									<th>AXO value</th>
+									<th class="t">AXO value</th>
 									<th>AXO</th>
 									<th>ACO</th>
 									<th class="t">Actions</th>

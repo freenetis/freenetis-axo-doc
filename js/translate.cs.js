@@ -38,6 +38,7 @@ var _t = {
 	'usage:': 'Použití:',
 	'comment': 'Komentář',
 	
+	'axo value': 'AXO hodnota',
 	'actions': 'Akce',
 	
 	'this page has no access rights': 'Tato stránka nevyžaduje žádná práva',

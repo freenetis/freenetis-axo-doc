@@ -1,3 +1,5 @@
+var lang = __t('lang');
+
 /**
  * Translate function
  * 
@@ -18,7 +20,7 @@ function __t(text)
 	
 	for (i = 0; i < arguments.length-1; i++)
 	{
-		text = text.replace('{s}', '<span class="translated_part">'+arguments[i+1]+'</span>');
+		text = text.replace('{s}', '<span class="important">'+arguments[i+1]+'</span>');
 	}
 	
 	return text;
@@ -33,10 +35,10 @@ function onActivate(node)
 {
 	if (node.parent !== null)
 	{
-		parent = node.parent;
+		var parent = node.parent;
 
 		// display breadcrumbs
-		breadcrumbs = new Array();
+		var breadcrumbs = new Array();
 		breadcrumbs.unshift(node.data.nf_title);
 		
 		while (parent.parent !== null)
@@ -81,7 +83,7 @@ function onActivate(node)
 			default:
 				if (typeof node.data.type !== 'undefined')
 				{
-					count = node.data.type.match(/\//g);
+					var count = node.data.type.match(/\//g);
 
 					if (count === null)
 					{
@@ -132,7 +134,7 @@ function onActivate(node)
 		}
 		
 		// display details from children
-		detail = '';
+		var detail = '';
 		if (node.data.children !== null &&
 			node.data.type !== 'method')
 		{
@@ -140,8 +142,7 @@ function onActivate(node)
 			
 			for (i = 0; i < len; i++)
 			{
-				link = 'detail';
-				detail += '<li><span class="links '+link+'_link" href="'+node.data.children[i].key+'">'+node.data.children[i].nf_title+"</span></li>";
+				detail += '<li><span class="links detail_link" href="'+node.data.children[i].key+'">'+node.data.children[i].nf_title+"</span></li>";
 			}
 			
 			$('#details #node_detail').html('<ul>'+detail+'</ul>');
@@ -167,7 +168,29 @@ function onActivate(node)
 			
 			for (i = 0; i < len; i++)
 			{
-				$('#'+node.data.children[i].usage+"_table").append('<tr class="axo"><td>'+node.data.children[i].value+'</td><td>'+node.data.children[i].section+'</td><td>'+node.data.children[i].action+'</td><td><span class="detail_link axo_show_detail" href="axo_section/'+node.data.children[i].section+'/'+node.data.children[i].value+'"></span></td></tr>');
+				var title = node.data.children[i].value;
+				var cls = '';
+				
+				if (typeof node.data.children[i].c_en !== 'undefined' &&
+					node.data.children[i].c_en !== null &&
+					typeof node.data.children[i].c_cs !== 'undefined' &&
+					node.data.children[i].c_cs !== null
+					)
+				{
+					if (lang === 'cs')
+					{
+						var comment = node.data.children[i].c_cs;
+					}
+					else
+					{
+						var comment = node.data.children[i].c_en;
+					}
+					
+					title = '<span class="has_hint" title="'+comment+'">'+title+'</span>';
+				}
+				
+				
+				$('#'+node.data.children[i].usage+"_table").append('<tr class="axo"><td>'+title+'</td><td>'+node.data.children[i].section+'</td><td>'+node.data.children[i].action+'</td><td><span class="detail_link axo_show_detail" href="axo_section/'+node.data.children[i].section+'/'+node.data.children[i].value+'"></span></td></tr>');
 			}
 		}
 		else
@@ -199,13 +222,13 @@ function onActivate(node)
 			node.data.c_cs !== null
 			)
 		{
-			if (__t('lang') === 'cs')
+			if (lang === 'cs')
 			{
-				comment = node.data.c_cs;
+				var comment = node.data.c_cs;
 			}
 			else
 			{
-				comment = node.data.c_en;
+				var comment = node.data.c_en;
 			}
 			
 			$('#details #comment').text("");
@@ -228,7 +251,7 @@ function onActivate(node)
  */
 function customRender(node)
 {
-	if (__t('lang') === 'cs')
+	if (lang === 'cs')
 	{
 		comment = node.data.c_cs;
 	}
