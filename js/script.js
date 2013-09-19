@@ -160,11 +160,11 @@ function onActivate(node)
 			
 			len = node.data.children.length;
 			
-			$('#access_table tr.axo').remove();
-			$('#access-partial_table tr.axo').remove();
-			$('#links_table tr.axo').remove();
-			$('#breadcrumbs_table tr.axo').remove();
-			$('#grid-action_table tr.axo').remove();
+			$('#access_table').parent().parent().addClass('hide').find('tr.axo').remove();
+			$('#access-partial_table').parent().parent().addClass('hide').find('tr.axo').remove();
+			$('#links_table').parent().parent().addClass('hide').find('tr.axo').remove();
+			$('#breadcrumbs_table').parent().parent().addClass('hide').find('tr.axo').remove();
+			$('#grid-action_table').parent().parent().addClass('hide').find('tr.axo').remove();
 			
 			for (i = 0; i < len; i++)
 			{
@@ -189,8 +189,8 @@ function onActivate(node)
 					title = '<span class="has_hint" title="'+comment+'">'+title+'</span>';
 				}
 				
-				
 				$('#'+node.data.children[i].usage+"_table").append('<tr class="axo"><td>'+title+'</td><td>'+node.data.children[i].section+'</td><td>'+node.data.children[i].action+'</td><td><span class="detail_link axo_show_detail" href="axo_section/'+node.data.children[i].section+'/'+node.data.children[i].value+'"></span></td></tr>');
+				$('#'+node.data.children[i].usage+"_table").parent().parent().removeClass('hide');
 			}
 		}
 		else
@@ -339,13 +339,13 @@ $(function()
 				if (tab === 'axo')
 				{
 					$('#axo_sections_tab').click();
-					$('#sections_tree').dynatree('getTree').activateKey(tab+'/'+req);
+					$('#sections_tree').dynatree('getTree').activateKey('axo_section/'+req);
 					$('#sections_tree').dynatree('getActiveNode').expand();
 				}
 				else
 				{
 					$('#sources_tab').click();
-					$('#sources_tree').dynatree('getTree').activateKey(tab+'/'+req);
+					$('#sources_tree').dynatree('getTree').activateKey('controller/'+req);
 					$('#sources_tree').dynatree('getActiveNode').expand();
 				}
 			}

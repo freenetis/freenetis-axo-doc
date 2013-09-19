@@ -48,61 +48,71 @@
 					<div id="show_detail" class="hide"></div>
 					<div id="node_detail" class="hide"></div>
 					<div id="method_detail" class="hide">
-						<div><img src="js/skin/access.png"><span class="t">access rights for access to page</span></div>
-						<table>
-							<tbody id="access_table">
-								<tr>
-									<th class="t">AXO value</th>
-									<th>AXO</th>
-									<th>ACO</th>
-									<th class="t">Actions</th>
-								</tr>
-							</tbody>
-						</table>
-						<div><img src="js/skin/access-partial.png"><span class="t">access rights for access to part of page</span></div>
-						<table>
-							<tbody id="access-partial_table">
-								<tr>
-									<th class="t">AXO value</th>
-									<th>AXO</th>
-									<th>ACO</th>
-									<th class="t">Actions</th>
-								</tr>
-							</tbody>
-						</table>
-						<div><img src="js/skin/links.png"><span class="t">Access rights for links to other pages</span></div>
-						<table>
-							<tbody id="links_table">
-								<tr>
-									<th class="t">AXO value</th>
-									<th>AXO</th>
-									<th>ACO</th>
-									<th class="t">Actions</th>
-								</tr>
-							</tbody>
-						</table>
-						<div><img src="js/skin/breadcrumbs.png"><span class="t">Access rights for breadcrumbs navigation</span></div>
-						<table>
-							<tbody id="breadcrumbs_table">
-								<tr>
-									<th class="t">AXO value</th>
-									<th>AXO</th>
-									<th>ACO</th>
-									<th class="t">Actions</th>
-								</tr>
-							</tbody>
-						</table>
-						<div><img src="js/skin/grid-action.png"><span class="t">Access rights for grid actions</span></div>
-						<table>
-							<tbody id="grid-action_table">
-								<tr>
-									<th class="t">AXO value</th>
-									<th>AXO</th>
-									<th>ACO</th>
-									<th class="t">Actions</th>
-								</tr>
-							</tbody>
-						</table>
+						<div>
+							<div><img src="js/skin/access.png"><span class="t">access rights for access to page</span></div>
+							<table>
+								<tbody id="access_table">
+									<tr>
+										<th class="t">AXO value</th>
+										<th>AXO</th>
+										<th>ACO</th>
+										<th class="t">Actions</th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div>
+							<div><img src="js/skin/access-partial.png"><span class="t">access rights for access to part of page</span></div>
+							<table>
+								<tbody id="access-partial_table">
+									<tr>
+										<th class="t">AXO value</th>
+										<th>AXO</th>
+										<th>ACO</th>
+										<th class="t">Actions</th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div>
+							<div><img src="js/skin/links.png"><span class="t">Access rights for links to other pages</span></div>
+							<table>
+								<tbody id="links_table">
+									<tr>
+										<th class="t">AXO value</th>
+										<th>AXO</th>
+										<th>ACO</th>
+										<th class="t">Actions</th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div>
+							<div><img src="js/skin/breadcrumbs.png"><span class="t">Access rights for breadcrumbs navigation</span></div>
+							<table>
+								<tbody id="breadcrumbs_table">
+									<tr>
+										<th class="t">AXO value</th>
+										<th>AXO</th>
+										<th>ACO</th>
+										<th class="t">Actions</th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div>
+							<div><img src="js/skin/grid-action.png"><span class="t">Access rights for grid actions</span></div>
+							<table>
+								<tbody id="grid-action_table">
+									<tr>
+										<th class="t">AXO value</th>
+										<th>AXO</th>
+										<th>ACO</th>
+										<th class="t">Actions</th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 					<table id="axo_detail" class="hide">
 						<tbody>

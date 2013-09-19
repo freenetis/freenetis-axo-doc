@@ -166,7 +166,7 @@ table#axo_detail th {
 	background-color: #eeeeee;
 }
 
-#method_detail > div {
+#method_detail div div {
 	border: solid #CCCCCC;
 	background-color: #eeeeee;
 	border-width: 1px 1px 0 1px;
