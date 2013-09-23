@@ -18,9 +18,12 @@ function __t(text)
 		}
 	}
 	
-	for (i = 0; i < arguments.length-1; i++)
+	if (arguments.length > 1)
 	{
-		text = text.replace('{s}', '<span class="important">'+arguments[i+1]+'</span>');
+		for (i = 0; i < arguments.length-1; i++)
+		{
+			text = text.replace('{s}', '<span class="important">'+arguments[i+1]+'</span>');
+		}
 	}
 	
 	return text;
@@ -189,7 +192,7 @@ function onActivate(node)
 					title = '<span class="has_hint" title="'+comment+'">'+title+'</span>';
 				}
 				
-				$('#'+node.data.children[i].usage+"_table").append('<tr class="axo"><td>'+title+'</td><td>'+node.data.children[i].section+'</td><td>'+node.data.children[i].action+'</td><td><span class="detail_link axo_show_detail" href="axo_section/'+node.data.children[i].section+'/'+node.data.children[i].value+'"></span></td></tr>');
+				$('#'+node.data.children[i].usage+"_table").append('<tr class="axo"><td>'+title+'</td><td>'+node.data.children[i].section+'</td><td>'+__t(node.data.children[i].action)+'</td><td><span class="detail_link axo_show_detail" href="axo_section/'+node.data.children[i].section+'/'+node.data.children[i].value+'"></span></td></tr>');
 				$('#'+node.data.children[i].usage+"_table").parent().parent().removeClass('hide');
 			}
 		}
@@ -206,7 +209,7 @@ function onActivate(node)
 			$('#details #usage').text("");
 
 			$('#details #axo').html("<span class='detail_link links' href='axo_section/"+node.data.section+"/"+node.data.value+"'>"+node.data.value+"</span> (<span class='detail_link links' href='axo_section/"+node.data.section+"'>"+node.data.section+"</span>)");
-			$('#details #aco').text(node.data.action+" ("+__t(node.data.action)+")");
+			$('#details #aco').text(__t(node.data.action));
 			$('#details #usage').text(__t(node.data.usage));
 			$('#details #axo_detail').removeClass('hide');
 		}
